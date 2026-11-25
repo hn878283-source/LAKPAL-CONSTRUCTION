@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { HardHat, Phone, Mail, MapPin, Facebook, Instagram, Youtube, Twitter } from 'lucide-react'
+import Image from 'next/image'
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Twitter } from 'lucide-react'
 
 export default function Footer() {
   const col: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 12 }
@@ -12,14 +13,14 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-              <div style={{ width: 42, height: 42, borderRadius: 10, background: 'linear-gradient(135deg,#D4A853,#E8C57A)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <HardHat size={22} color="#08090B" />
-              </div>
-              <div>
-                <div style={{ fontSize: 18, fontWeight: 700, color: '#fff', fontFamily: 'Georgia, serif' }}>LAKPAL</div>
-                <div style={{ fontSize: 10, color: '#D4A853', letterSpacing: '0.3em', textTransform: 'uppercase' }}>Construction</div>
-              </div>
+            <div style={{ marginBottom: 20 }}>
+              <Image
+                src="/logo.png"
+                alt="Lakpal Consultants Logo"
+                width={150}
+                height={70}
+                style={{ objectFit: 'contain', height: 70, width: 'auto' }}
+              />
             </div>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, lineHeight: 1.7, marginBottom: 20 }}>
               Building dreams with quality, precision, and trust. Your vision, our expertise.

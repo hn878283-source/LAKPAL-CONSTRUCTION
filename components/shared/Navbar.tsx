@@ -1,8 +1,9 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, HardHat } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import InquiryModal from './InquiryModal'
 
@@ -43,19 +44,15 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 80 }}>
 
             {/* Logo */}
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-              <div style={{
-                width: 42, height: 42, borderRadius: 10,
-                background: 'linear-gradient(135deg, #D4A853, #E8C57A)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                flexShrink: 0,
-              }}>
-                <HardHat size={22} color="#08090B" />
-              </div>
-              <div>
-                <div style={{ fontSize: 20, fontWeight: 700, color: '#fff', letterSpacing: 2, fontFamily: 'Georgia, serif' }}>LAKPAL</div>
-                <div style={{ fontSize: 10, color: '#D4A853', letterSpacing: '0.3em', textTransform: 'uppercase', marginTop: -2 }}>Construction</div>
-              </div>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+              <Image
+                src="/logo.png"
+                alt="Lakpal Consultants Logo"
+                width={130}
+                height={60}
+                style={{ objectFit: 'contain', height: 60, width: 'auto' }}
+                priority
+              />
             </Link>
 
             {/* Desktop Nav links */}

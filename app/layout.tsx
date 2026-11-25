@@ -7,10 +7,15 @@ export const metadata: Metadata = {
   title: 'Lakpal Construction – Premium Construction Company',
   description: 'Lakpal Construction – Residential & Commercial Construction, Home Renovation, Interior Design. Expert builders delivering dream projects across India.',
   keywords: 'construction company, home construction, commercial building, renovation, interior design, Lakpal Construction',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'Lakpal Construction – Premium Construction Company',
     description: 'Building Dreams, Creating Futures. Expert residential & commercial construction services.',
     type: 'website',
+    images: [{ url: '/logo.png' }],
   },
 }
 
